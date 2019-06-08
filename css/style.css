@@ -1,4 +1,74 @@
+*, *:before, *:after {
+  border-sizing: border-box;
+}
+
 body {
   background-color: #dadada;
   font-size: 10px;
+}
+
+.container {
+  width: 100%;
+  text-align: left;
+}
+
+.header {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0px;
+  font-family: sans-serif;
+}
+
+.preview-baku, .preview-london, .preview-madrid, .preview-rome {
+  display: inline-block;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 30em;
+  object-fit: cover;
+  float: left;
+}
+
+.preview-baku h1, .preview-london h1, .preview-madrid h1, .preview-rome h1 {
+  position: absolute;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+/*ipad screens*/
+@media screen and (min-width: 575px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .preview-baku, .preview-london, .preview-madrid, .preview-rome {
+    width:48%;
+    padding: 0 1% 1% 0;
+  }
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    text-align: center;
+  }
+}
+
+/*laptop screen*/
+@media screen and (min-width: 991px) {
+  .container {
+    width: 80%;
+  }
+  .preview-baku, .preview-london, .preview-madrid, .preview-rome {
+    width:22%;
+    padding: 2% 2% 0 0;
+  }
+  img {
+    height: 250px;
+  }
 }
